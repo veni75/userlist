@@ -78,7 +78,10 @@
   <div class="row">
     <div class="col-8">
       
-      <app-data-list [phraseString]="phrase" [dataList]="dataList" (deleteClick)="onDeleteUser($event)"></app-data-list>
+      <app-data-list [phraseString]="phrase" [dataList]="dataList" 
+      (selectClick)="onSelectUser($event)"
+      (updateClick)="onUpdateUser($event)"
+      (deleteClick)="onDeleteUser($event)"></app-data-list>
     </div>
     <div class="col-4">      
       <app-user-detail [user]="currentUser" (delUser)="onDeleteUser($event)"></app-user-detail>

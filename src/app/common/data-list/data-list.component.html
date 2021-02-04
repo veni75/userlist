@@ -12,11 +12,13 @@ a megfelelő nevű metódusokat. -->
     <span class="text-bold">email</span>
     <span class="text-bold">address</span>
     <span class="text-bold">active</span>    
+    <span class="text-bold">&nbsp;&nbsp;</span>    
   </div>
 </div>
 <div class="row">
   <div class="col-12 mt-1 data-list-row">
-    <app-data-row *ngFor="let row of dataList" [dataRow]="row" (selectClick)="onSelectClicked($event)" (updateClick)="onUpdateClicked($event)" (deleteClick)="onDeleteClicked($event)"> </app-data-row>
+    <app-data-row *ngFor="let row of dataList" [dataRow]="row" 
+    (selectClick)="onSelectClicked($event)" (updateClick)="onUpdateClicked($event)" (deleteClick)="onDeleteClicked($event)"> </app-data-row>
   </div>
 </div>
 

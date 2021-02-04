@@ -11,11 +11,9 @@ metódussal. -->
     <app-data-cell [data]="dataRow" [key]="'email'"></app-data-cell>
     <app-data-cell [data]="dataRow" [key]="'address'"></app-data-cell>
     <app-data-cell [data]="dataRow" [key]="'active'"></app-data-cell>
-    <app-action-button-group (selectClick)="onSelectClicked($event)" (updateClick)="onUpdateClicked()$event" (deleteClick)="onDeleteClicked()$event"></app-action-button-group>
+    <app-action-button-group (selectClick)="onSelectClicked()" (updateClick)="onUpdateClicked()" (deleteClick)="onDeleteClicked()"></app-action-button-group>
   </div>
 </div>
-
-
 
 
 <!-- ## 5. DataRowComponent

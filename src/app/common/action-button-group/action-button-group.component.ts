@@ -19,11 +19,11 @@ export class ActionButtonGroupComponent implements OnInit {
   }
 
   onUpdateButtonClick(): void {
-    this.updateClick.emit();
+    this.updateClick.emit(true);
   }
 
   onDeleteButtonClick(): void {
-    this.deleteClick.emit();
+    this.deleteClick.emit(true);
   }
 
 }

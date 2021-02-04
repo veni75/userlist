@@ -8,7 +8,7 @@ import { User } from 'src/app/model/user';
 })
 export class DataListComponent implements OnInit {
   @Input() dataList: User[] = [];
-  @Input() dataRow: User = new User();
+  
   @Input() phraseString: string = '';
   @Output() selectClick: EventEmitter<User> = new EventEmitter();
   @Output() updateClick: EventEmitter<User> = new EventEmitter();
@@ -28,14 +28,14 @@ export class DataListComponent implements OnInit {
     this.currentUser = new User();
   }
 
-  onSelectClicked(): void {
-    this.selectClick.emit(this.dataRow);
+  onSelectClicked(dataRow:User): void {
+    this.selectClick.emit(dataRow);
   }
-  onUpdateClicked(): void {
-    this.updateClick.emit(this.dataRow);
+  onUpdateClicked(dataRow:User): void {
+    this.updateClick.emit(dataRow);
   }
-  onDeleteClicked(): void {
-    this.deleteClick.emit(this.dataRow);
+  onDeleteClicked(dataRow:User): void {
+    this.deleteClick.emit(dataRow);
   }
 }
 

@@ -15,8 +15,8 @@ export class AppComponent {
   constructor(
     private UserService: UserService,
   ) { }
-  onUserSelect(user:User):void{
-    //this.UserService.list(user);
+  onSelectUser(user:User):void{
+    this.currentUser = user;
   }
   onUpdateUser(user:User):void{
     this.UserService.updateUser(user);
